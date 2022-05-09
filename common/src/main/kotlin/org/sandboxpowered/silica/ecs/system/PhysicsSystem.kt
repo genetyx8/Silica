@@ -56,6 +56,7 @@ class PhysicsSystem : IteratingSystem() {
             var min = -1f
 
             // TODO: Replace this shit with Swept AABB
+            // gotcha fam :)
             bounds.walkCorners { cx, cy, cz ->
                 val hit = worldSection.rayCast(Vector3f(cx, cy, cz), nDirection, velocityComponent.velocity)
                 if (hit == 0f) return // TODO: try to unstuck the poor thing (as this means one or more of it's corners are inside a non air block)
